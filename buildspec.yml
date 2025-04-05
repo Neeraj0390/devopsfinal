@@ -50,7 +50,7 @@ phases:
       - echo "Contents of requirements.txt:"
       - cat "$CODEBUILD_SRC_DIR/requirements.txt"
       - echo "Running OWASP Dependency-Check..."
-      - /opt/dependency-check/bin/dependency-check.sh --project "Django Project" --scan "$CODEBUILD_SRC_DIR/" --out ./dependency-check-report --data "$CODEBUILD_SRC_DIR/nvd-cache" --log dependency-check.log  --nvdApiKey <9a2f5fda-a545-4181-928d-fdc2aeb36133>
+      - /opt/dependency-check/bin/dependency-check.sh --project "Django Project" --scan "$CODEBUILD_SRC_DIR/" --out ./dependency-check-report --data "$CODEBUILD_SRC_DIR/nvd-cache" --log dependency-check.log  --nvdApiKey 9a2f5fda-a545-4181-928d-fdc2aeb36133
 
       - echo "Build, SonarCloud scan, and Dependency-Check completed"
 
